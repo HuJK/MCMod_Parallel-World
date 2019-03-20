@@ -7,7 +7,7 @@ import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHandler {
      public static Configuration config;
-     private static String file = "config/prallelWorld.cfg";
+     private static String file = "config/ParallelWorld.cfg";
      
      public static void init() {
           config = new Configuration(new File(file));
