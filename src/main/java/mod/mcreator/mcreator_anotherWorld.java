@@ -809,7 +809,7 @@ public class mcreator_anotherWorld {
 		 * which neighbor changed (coordinates passed are their own) Args: x, y,
 		 * z, neighbor blockID
 		 */
-		public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
+		public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5) {
 			byte b0 = 0;
 			byte b1 = 1;
 			if (par1World.getBlock(par2 - 1, par3, par4) == this || par1World.getBlock(par2 + 1, par3, par4) == this) {

@@ -79,6 +79,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.world.gen.ChunkProviderHell;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.WorldProviderHell;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenHell;
+
 
 @SuppressWarnings("unchecked")
 public class mcreator_anotherNether {
@@ -145,7 +148,7 @@ public class mcreator_anotherNether {
 	public static class WorldProviderMod extends WorldProviderHell {
 
 		public void registerWorldChunkManager() {
-			this.worldChunkMgr = new WorldChunkManager(this.worldObj);
+			this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.hell, 0.0F);
 			this.isHellWorld = true;
 			this.hasNoSky = true;
 			this.dimensionId = DIMID;
@@ -810,7 +813,7 @@ public class mcreator_anotherNether {
 		 * which neighbor changed (coordinates passed are their own) Args: x, y,
 		 * z, neighbor blockID
 		 */
-		public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
+		public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5) {
 			byte b0 = 0;
 			byte b1 = 1;
 			if (par1World.getBlock(par2 - 1, par3, par4) == this || par1World.getBlock(par2 + 1, par3, par4) == this) {
