@@ -889,6 +889,8 @@ public class mcreator_anotherWorld {
 					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0,
 							new TeleporterDimensionMod(thePlayer.mcServer.worldServerForDimension(0)));
 				}
+                   thePlayer.addExperienceLevel(0);
+                   //thePlayer.removeExperienceLevel(1);
 			}
 		}
 
